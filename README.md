@@ -37,16 +37,8 @@ or to plot the input with
 ```
 
 ## 📄 Thesis Abstract
-In this paper, we introduce an adaptation of the facility lo-
-cation problem and analyze it within the framework of local differential
-privacy (LDP). Under this model, we ensure the privacy of client pres-
-ence at specific locations. When n is the number of points, Gupta et
-al. established a lower bound of Ω(√n) on the approximation ratio
-for any differentially private algorithm applied to the original facility
-location problem. As a result, subsequent works have adopted the super-
-set assumption, which may, however, compromise user privacy. We show
-that this lower bound does not apply to our adaptation by presenting
-an LDP algorithm that achieves a constant approximation ratio with a
-relatively small additive factor. Additionally, we provide experimental re-
-sults demonstrating that our algorithm outperforms the straightforward
+In this paper, we introduce an adaptation of the facility location problem and analyze it within the framework of local differential
+privacy (LDP). Under this model, we ensure the privacy of client presence at specific locations. When n is the number of points, Gupta et
+al. established a lower bound of Ω(√n) on the approximation ratio for any differentially private algorithm applied to the original facility location problem. As a result, subsequent works have adopted the super-set assumption, which may, however, compromise user privacy. We show that this lower bound does not apply to our adaptation by presenting
+an LDP algorithm that achieves a constant approximation ratio with a relatively small additive factor. Additionally, we provide experimental results demonstrating that our algorithm outperforms the straightforward
 approach on both synthetically generated and real-world datasets.
