@@ -18,7 +18,7 @@ Each experiment is organized in its corresponding folder. You can run benchmarks
 
 ```bash
 # Compile benchmark
-make delta/delta_benchmark
+make delta_benchmark
 
 # Run delta benchmark
 ./delta_benchmark.bin [args]
