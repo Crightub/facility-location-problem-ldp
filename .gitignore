@@ -1,0 +1,23 @@
+# ignore benchmark
+b_benchmark_out
+gamma_benchmark_out
+eps_benchmark_out
+benchmark_out
+
+# ignore input and output files
+input
+out
+*.csv
+
+# Ignore object files
+*.o
+*.obj
+
+# Ignore compiled binaries
+*.bin
+*.exe
+*.out
+*.app
+
+# ignore vscode settings
+.vscode
