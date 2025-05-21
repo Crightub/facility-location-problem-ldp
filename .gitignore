@@ -7,7 +7,6 @@ benchmark_out
 # ignore input and output files
 input
 out
-*.csv
 
 # Ignore object files
 *.o

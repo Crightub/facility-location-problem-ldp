@@ -1,7 +1,7 @@
-#include "utils.h"
-#include "generate.h"
-#include "opt.h"
-#include "privacy.h"
+#include "../utils.h"
+#include "../generate.h"
+#include "../opt.h"
+#include "../privacy.h"
 
 struct delta_benchmark_result
 {

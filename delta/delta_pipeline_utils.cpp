@@ -1,4 +1,4 @@
-#include "delta_pipeline_utils.h"
+#include "./delta_pipeline_utils.h"
 
 void save_delta_benchmark_results(std::vector<delta_benchmark_result> results)
 {
