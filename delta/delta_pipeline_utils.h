@@ -13,7 +13,7 @@ struct delta_benchmark_result
     std::vector<location> best_reconn_out;
 };
 
-void save_delta_benchmark_results(std::vector<delta_benchmark_result> results);
+void save_delta_benchmark_results(std::vector<delta_benchmark_result> results, std::string filename);
 delta_benchmark_result run_delta(std::vector<location> instance, double eps, double alpha, double delta_step, double max_delta);
 void run(int instance_amount,
          int n,

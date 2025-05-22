@@ -94,7 +94,9 @@ void run(std::string filename, int instance_amount, double eps, double alpha, do
         results[i] = result;
     }
 
-    save_delta_benchmark_results(results);
+    std::string base_name = filename + "_out_" + std::to_string(f_min) + "_" + std::to_string(f_max);
+    std::string out_filename = generate_timestamped_filename("real_world/out", base_name, ".csv");
+    save_delta_benchmark_results(results, filename);
 }
 
 int main(int argc, char *argv[])

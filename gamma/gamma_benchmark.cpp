@@ -85,7 +85,8 @@ void run_gamma(
     }
 
     // store results
-    std::string result_filename = generate_timestamped_filename("gamma_benchmark_out", std::to_string(gamma_min) + "_" + std::to_string(gamma_max) + "_" + std::to_string(gamma_step), ".csv");
+    std::string base_name = std::to_string(gamma_min) + "_" + std::to_string(gamma_max) + "_" + std::to_string(gamma_step);
+    std::string result_filename = generate_timestamped_filename("gamma/out", base_name, ".csv");
     save_benchmark_results(benchmark_results, result_filename);
 }
 

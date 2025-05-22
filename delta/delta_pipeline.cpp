@@ -30,13 +30,9 @@ int main(int argc, char *argv[])
 
     delta_benchmark_result result = run_delta(instance, eps, alpha, delta_step, delta_max);
 
-    std::string filename = generate_timestamped_filename("out", input_file.substr(6, input_file.size() - 3) + "_out", ".out");
+    std::string base_name = "pipeline_" + std::to_string(delta_max) + "_" + std::to_string(delta_step);
+    std::string filename = generate_timestamped_filename("delta/out", base_name, ".csv");
     save_results_to_file(result.best_reconn_out, filename);
-
-    std::vector<delta_benchmark_result> results;
-    results.push_back(result);
-
-    save_delta_benchmark_results(results);
 
     return 0;
 }

@@ -74,12 +74,11 @@ int main(int argc, char *argv[])
                                                      "-",
                                                      std::tuple<double, double>{avg_no_reconn_fac, avg_no_reconn_conn},
                                                      false});
-
-        // benchmark_results.insert(benchmark_results.end(), results.begin(), results.end());
     }
 
     // Store benchmark results
-    std::string result_filename = generate_timestamped_filename("benchmark_out", "benchmark", ".csv");
+    std::string base_name = std::to_string(n_min) + "_" + std::to_string(n_max) + "_" + std::to_string(n_step);
+    std::string result_filename = generate_timestamped_filename("instance_size_n/out", base_name, ".csv");
     save_benchmark_results(benchmark_results, result_filename);
 
     return 0;

@@ -1,9 +1,7 @@
 #include "./delta_pipeline_utils.h"
 
-void save_delta_benchmark_results(std::vector<delta_benchmark_result> results)
+void save_delta_benchmark_results(std::vector<delta_benchmark_result> results, std::string filename)
 {
-    std::string filename = generate_timestamped_filename("benchmark_out", "delta_benchmark", ".csv");
-
     // Open the file for writing
     std::ofstream csv_file(filename);
     if (!csv_file.is_open())
@@ -136,5 +134,8 @@ void run(int instance_amount,
         results.push_back(result);
     }
 
-    save_delta_benchmark_results(results);
+    // Store benchmark results
+    std::string base_name = std::to_string(delta) + "_" + std::to_string(delta_step);
+    std::string filename = generate_timestamped_filename("delta/out", "delta_benchmark", ".csv");
+    save_delta_benchmark_results(results, filename);
 }

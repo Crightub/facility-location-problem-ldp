@@ -12,7 +12,7 @@ struct eps_benchmark_result
 };
 
 eps_benchmark_result run_eps(std::vector<location> instance, double eps_step, double eps_min, double eps_max, double alpha, double delta);
-void save_eps_benchmark_results(std::vector<eps_benchmark_result> results);
+void save_eps_benchmark_results(std::vector<eps_benchmark_result> results, std::string filename);
 void run(int instance_amount,
          int n,
          double width,

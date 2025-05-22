@@ -17,7 +17,6 @@ fi
 
 gnuplot -persist <<EOF
 # Labels and title
-set title "Out"
 set xrange [0:*]
 set yrange [0:*]
 set xlabel "X"

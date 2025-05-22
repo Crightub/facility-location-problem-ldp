@@ -1,9 +1,7 @@
 #include "eps_pipeline_utils.h"
 
-void save_eps_benchmark_results(std::vector<eps_benchmark_result> results)
+void save_eps_benchmark_results(std::vector<eps_benchmark_result> results, std::string filename)
 {
-    std::string filename = generate_timestamped_filename("eps_benchmark_out", "eps_benchmark", ".csv");
-
     std::ofstream csv_file(filename);
     if (!csv_file.is_open())
     {
@@ -119,5 +117,8 @@ void run(int instance_amount,
         results[i] = result;
     }
 
-    save_eps_benchmark_results(results);
+    // Store benchmark results
+    std::string base_name = std::to_string(eps_min) + "_" + std::to_string(eps_max) + "_" + std::to_string(eps_step);
+    std::string filename = generate_timestamped_filename("eps/out", base_name, ".csv");
+    save_eps_benchmark_results(results, filename);
 }

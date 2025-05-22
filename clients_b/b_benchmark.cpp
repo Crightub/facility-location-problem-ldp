@@ -86,7 +86,9 @@ void run_b(int instance_amount,
         }
     }   
 
-    std::string result_filename = generate_timestamped_filename("b_benchmark_out", "benchmark", ".csv");
+    // Store benchmark results
+    std::string base_name = std::to_string(b_avg_max) + "_" + std::to_string(b_avg_step);
+    std::string result_filename = generate_timestamped_filename("clients_b/out", base_name, ".csv");
     save_b_benchmark_results(results, result_filename);
 }
 

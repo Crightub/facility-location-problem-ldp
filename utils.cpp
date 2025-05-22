@@ -15,6 +15,13 @@ std::ostream& operator<<(std::ostream& os, const location& loc)
 
 std::string generate_timestamped_filename(const std::string &folder, const std::string &base_name, const std::string &extension)
 {
+    namespace fs = std::filesystem;
+
+    // Ensure the folder exists
+    if (!fs::exists(folder)) {
+        fs::create_directories(folder); // Creates the folder and any necessary parent folders
+    }
+
     // Get the current time
     auto now = std::chrono::system_clock::now();
     std::time_t current_time = std::chrono::system_clock::to_time_t(now);
@@ -61,6 +68,14 @@ void save_points_to_file(const std::vector<location> &points, const std::string 
 // Function to save results to a file with comma as delimiter
 void save_results_to_file(const std::vector<location> &points, const std::string &filename)
 {
+    // Ensure the folder exists
+    fs::path file_path(filename);
+    fs::path folder = file_path.parent_path();
+    if (!folder.empty() && !fs::exists(folder))
+    {
+        fs::create_directories(folder);
+    }
+    
     std::ofstream file(filename);
     if (!file)
     {
